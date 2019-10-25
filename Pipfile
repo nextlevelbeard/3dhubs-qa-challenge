@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytest = "*"
+pytest-base-url = "*"
+pytest-html = "*"
+pytest-metadata = "*"
+pytest-variables = "*"
+selenium = "==4.0.0a3"
+pytest-xdist = "*"
+pytest-bdd = "*"
+
+[scripts]
+tests = "pipenv run python -m pytest -n 4 tests --html=report.html"
+testsbdd = "pipenv run python -m pytest -n 4 tests/features/ --html=report.html --gherkin-terminal-reporter"
+
+
